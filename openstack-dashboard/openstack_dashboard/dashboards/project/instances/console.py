@@ -58,7 +58,8 @@ def get_console(request, console_type, instance):
         except Exception:
             LOG.debug('Console not available', exc_info=True)
             continue
-
+	if console.url.find('127.0.0.1'):
+	    console.url = console.url.replace('127.0.0.1', '192.168.99.108')
         if con_type == 'SERIAL':
             console_url = console.url
         else:

@@ -39,7 +39,7 @@ if ROOT_PATH not in sys.path:
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
-SITE_BRANDING = 'IPLAB实验台' 
+SITE_BRANDING = 'IPLAB Emulation' 
 WEBROOT = '/'
 LOGIN_URL = None
 LOGOUT_URL = None
