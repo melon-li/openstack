@@ -4,10 +4,8 @@ After=syslog.target network.target
 
 [Service]
 Type=simple
-#User=neutron
-User=root
+User=neutron
 ExecStart=/usr/bin/neutron-openvswitch-agent --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini --config-dir /etc/neutron/conf.d/neutron-openvswitch-agent --log-file /var/log/neutron/openvswitch-agent.log
-#ExecStart=/usr/bin/neutron-openvswitch-agent --config-file /etc/neutron/plugin.ini --log-file /var/log/neutron/openvswitch-agent.log
 PrivateTmp=true
 KillMode=process
 
