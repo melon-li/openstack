@@ -5,7 +5,7 @@ Before=neutron-openvswitch-agent.service neutron-dhcp-agent.service neutron-l3-a
 
 [Service]
 Type=oneshot
-User=neutron
+User=root
 ExecStart=/usr/bin/neutron-netns-cleanup --config-file /etc/neutron/dhcp_agent.ini --log-file /var/log/neutron/netns-cleanup.log
 ExecStop=/usr/bin/neutron-netns-cleanup  --config-file /etc/neutron/dhcp_agent.ini  --log-file /var/log/neutron/netns-cleanup.log --force
 PrivateTmp=false
