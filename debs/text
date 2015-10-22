@@ -1,0 +1,4 @@
+ qemu-common                                x86_64            2:1.6.2-14.fc20                           updates            232 k
+ qemu-img                                   x86_64            2:1.6.2-14.fc20                           updates            486 k
+ qemu-kvm                                   x86_64            2:1.6.2-14.fc20                           updates             45 k
+ qemu-system-x86   
