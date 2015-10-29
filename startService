@@ -1,0 +1,10 @@
+!/bin/bash
+nohup /usr/bin/glance-api >/dev/null &
+
+nohup /usr/bin/neutron-openvswitch-agent --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/plugin.ini --config-dir /etc/neutron/conf.d/neutron-openvswitch-agent --log-file /var/log/neutron/openvswitch-agent.log > /dev/null &
+
+
+nohup /usr/bin/neutron-dhcp-agent --config-file /usr/share/neutron/neutron-dist.conf --config-file /etc/neutron/neutron.conf --config-file /etc/neutron/dhcp_agent.ini --config-dir /etc/neutron/conf.d/neutron-dhcp-agent --log-file /var/log/neutron/dhcp-agent.log > /dev/null &
+
+#neutron-l3-agent
+nohup /usr/bin/neutron-l3-agent --config-file /etc/neutron/l3_agent.ini --config-file /etc/neutron/neutron.conf --log-file /var/log/neutron/l3-agent.log >/dev/null &
